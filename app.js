@@ -39,6 +39,12 @@ deleteBtn.textContent = "Delete";
 deleteBtn.classList.add("delete-btn");
 listItem.appendChild(deleteBtn);
 
+// create an edit button for the appointment
+  const editBtn = document.createElement("button");
+  editBtn.textContent = "Edit";
+  editBtn.classList.add("edit-btn");
+  listItem.appendChild(editBtn);
+
 // add list itme to the list appointment
 
 appointmentList.appendChild(listItem);
@@ -86,6 +92,30 @@ appointmentList.addEventListener("click", (event) =>{
 
     localStorage.setItem("appointemnets", JSON.stringify(updateAppointemnet))
   
+  }
+
+  if (event.target.classList.contains("edit-btn")) {
+    const listItem = event.target.parentElement;
+    const appointmentId = listItem.textContent;
+    const [name, email, date, time] = appointmentId.split(" - ");
+    document.getElementById("name").value = name;
+    document.getElementById("email").value = email;
+
+    listItem.remove();
+
+    // get the appointment details from the UI for localStorage
+    const appointments =
+      JSON.parse(localStorage.getItem("appointments")) || [];
+
+    const updateAppointemnet = appointments.filter(
+      (appointment) =>
+        `${appointment.name} - ${appointment.email} - ${appointment.date} - ${appointment.time}` !== appointmentId
+    );
+
+    localStorage.setItem(
+      "appointments",
+      JSON.stringify(updateAppointemnet)
+    );
   }
   
 });
