@@ -1,0 +1,123 @@
+body, form, ul{
+      margin: 0;
+      padding: 0;
+      background-color: antiquewhite;
+}
+
+
+/* center form on the page */
+
+form{
+      width: 400px;
+      margin: 0 auto;
+}
+
+/* add some spacing between form element */
+
+form label, form input{
+      margin-bottom: 10px;
+}
+
+
+/* style the form input */
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"]{
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+}
+
+
+/* style form submit button */
+
+input[type="submit"]{
+      width: 420px;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 8px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+}
+
+/* style the booked appointemetn list */
+
+.appointmentList{
+      margin-top: 30px;
+}
+
+
+.appointmentList h2{
+      margin-bottom: 10px;
+}
+
+
+#appointments{
+      list-style-type: none;
+      width: 300px;
+      margin: 0 auto;
+}
+
+
+#appointments{
+      margin-bottom: 10px;
+      /* margin: 0 auto; */
+}
+
+
+
+ h1,h2 {
+      
+      width: 400px;
+      margin: 0 auto;
+} 
+
+
+/*  Responsive styles */
+
+
+/* Make the form width 100% on small screens */
+@media screen and (max-width: 767px) {
+      form {
+        width: 100%;
+      }
+    }
+
+/* Add some margin to the form elements on small screens */
+    @media screen and (max-width: 767px) {
+      form label, form input {
+        margin-bottom: 5px;
+      }
+    }   
+
+/* Reduce font size of form inputs on small screens */
+    @media screen and (max-width: 767px) {
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      input[type="time"],
+      input[type="submit"] {
+        font-size: 14px;
+      }
+    }  
+
+    
+    /* Add some margin to the list of appointments on small screens */
+    @media screen and (max-width: 767px) {
+      .appointmentList {
+        margin-top: 20px;
+      }
+    }
+
+
+/* Reduce margin between list items on small screens */
+    @media screen and (max-width: 767px) {
+      #appointments li {
+        margin-bottom: 3px;
+      }
+    }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Booking Appointment</h1>
+    <form id="bookingForm">
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time :</label>
+        <input type="time" id="time" name="time" required>
+
+        <!-- input submit button -->
+
+        <input type="submit" value="Booking Appointment">
+    </form>
+
+    <div class="appointmentList">
+        <h2>Booked Appointments</h2>
+        <ul id="appointments"></ul>
+        
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
