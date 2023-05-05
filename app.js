@@ -63,13 +63,20 @@ const appointment = {
   date  : date,
   time : time,
 };
+ // Send POST request to the API
+axios.post('https://crudcrud.com/api/6718ea8d86e54f7bbc28ee49eb037a68/appointments', appointment)
+  .then(response => {
+    console.log(response.data);
+   
+  })
+  .catch(error => {
+    console.error(error);
+  });
+// const appointments = JSON.parse(localStorage.getItem("appointments")) || [] ;
 
+// appointments.push(appointment);
 
-const appointments = JSON.parse(localStorage.getItem("appointments")) || [] ;
-
-appointments.push(appointment);
-
-localStorage.setItem("appointments", JSON.stringify(appointments));
+// localStorage.setItem("appointments", JSON.stringify(appointments));
 });
 
 
